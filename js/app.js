@@ -1,11 +1,7 @@
-var card = prompt("Ingresa los 16 digitos de la tarjeta.");
+do{ var card = prompt("Ingresa los 16 digitos de la tarjeta.");
+}while(isNaN(card) || (card.length !== 16));
 var array = []; //Se guarda el numero
-  for(var j = 0; j <= card.lenght; j++){
-    if(card[j] === " "){
-      alert("ingresa los números sin espacios");
-      break;
-    }
-  }
+
   for(var i = card.length -1; i >= 0; i--){
     array.push(parseInt(card[i]));
   }
@@ -34,8 +30,9 @@ var array = []; //Se guarda el numero
    var sumaTotal = sumPairs + sumaImpares;
    console.log("Suma total " + sumaTotal);
    if (sumaTotal % 10 === 0){
-     return true;
+     return "tarjeta es valida";
    }else{
-     return false;
+     return "tu tarjeta es invalida";
    }
   }
+isValidCard(card):
